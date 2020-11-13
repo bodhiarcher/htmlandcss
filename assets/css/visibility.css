@@ -1,0 +1,30 @@
+/*CSS visibility Property
+Unlike the display property, the visibility property only hides the element. 
+It doesn’t remove it from the page. The element is still there in the flow of the page, but hidden. 
+It still occupies the space just like any other visible element. The visibility property hides or shows the element. 
+Set its value to hidden to hide the targeted content.*/
+
+Example
+Make <h2> elements visible and hidden:
+
+h2.a {
+  visibility: visible;
+}
+
+h2.b {
+  visibility: hidden;
+}
+
+/*CSS Syntax
+visibility: visible|hidden|collapse|initial|inherit;
+Property Values
+Value	Description	Play it
+visible	Default value. The element is visible	
+hidden	The element is hidden (but still takes up space)	
+collapse	Only for table rows (<tr>), row groups (<tbody>), columns (<col>), column groups (<colgroup>).
+This value removes a row or column, but it does not affect the table layout. 
+The space taken up by the row or column will be available for other content.
+If collapse is used on other elements, it renders as "hidden"
+
+initial	Sets this property to its default value.	
+inherit	Inherits this property from its parent element.*/

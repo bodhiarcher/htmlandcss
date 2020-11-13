@@ -1,0 +1,15 @@
+Centering
+Centering content with CSS is a core required skill if you want to become a web developer. 
+Some content is easier to center, while some require more thinking and CSS knowledge.
+
+Horizontal Centering
+How can we center a block element horizontally? Setting the value auto for the left and right margin will center any block level element.
+In order to center inline-block elements, we need to add the text-align property to the parent of the inline-block. 
+The text-align property is used for aligning the text, but it can be used in this case as well.
+These are all static positioned elements. But what about relative or absolute positioned elements? 
+Relative elements do not have major differences. 
+Let’s look at the same example for a block-level element, but this time let’s add relative position:
+
+But for absolute positioned elements, we need to set the left and right property along with the auto property for margin-left and margin-right
+Vertical centering is a bit trickier. Let’s assume we want to center a div. There is a CSS property that can help us achieve our task. 
+The transform property with a translateY value will move the element on the Y-axis (Vertical axis) on the screen.

@@ -1,0 +1,518 @@
+/*The background-color property sets the background color of an element.
+The background of an element is the total size of the element, including padding and border (but not the margin).
+Tip: Use a background color and a text color that makes the text easy to read.*/
+
+Property Values
+Value   Description Play it
+color   Specifies the background color. Look at CSS Color Values for a complete list of possible color values.  
+transparent Specifies that the background color should be transparent. This is default  
+initial Sets this property to its default value.    
+inherit Inherits this property from its parent element.
+
+More Examples
+Example
+Specify the background color with a HEX value:
+
+body {background-color: #92a8d1;}
+
+Example
+Specify the background color with an RGB value:
+body {background-color: rgb(201, 76, 76);}
+
+Example
+Specify the background color with an RGBA value:
+body {background-color: rgba(201, 76, 76, 0.3);}
+
+Example
+Specify the background color with a HSL value:
+body {background-color: hsl(89, 43%, 51%);}
+
+Example
+Specify the background color with a HSLA value:
+body {background-color: hsla(89, 43%, 51%, 0.3);}
+
+Example
+Set background colors for different elements:
+body {
+  background-color: #fefbd8;
+}
+
+h1 {
+  background-color: #80ced6;
+}
+
+div {
+  background-color: #d5f4e6;
+}
+
+span {
+  background-color: #f18973;
+}
+
+/*BACKGROUND image
+The background-image property sets one or more background images for an element.
+By default, a background-image is placed at the top-left corner of an element, and repeated both vertically and horizontally.
+Tip: The background of an element is the total size of the element, including padding and border (but not the margin).
+Tip: Always set a background-color to be used if the image is unavailable.*/
+
+Example
+Sets two background images for the <body> element. Let the first image appear only once (with no-repeat), and let the second image be repeated:
+
+body {
+  background-image: url("img_tree.gif"), url("paper.gif");
+  background-repeat: no-repeat, repeat;
+  background-color: #cccccc;
+}
+Example
+Use different background properties to create a "hero" image:
+
+.hero-image {
+  background-image: url("photographer.jpg"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+Example
+Sets a linear-gradient (two colors) as a background image for a <div> element:
+
+#grad1 {
+  height: 200px;
+  background-color: #cccccc;
+  background-image: linear-gradient(red, yellow);
+}
+Example
+Sets a linear-gradient (three colors) as a background image for a <div> element:
+
+#grad1 {
+  height: 200px;
+  background-color: #cccccc;
+  background-image: linear-gradient(red, yellow, green);
+}
+Example
+The repeating-linear-gradient() function is used to repeat linear gradients:
+
+#grad1 {
+  height: 200px;
+  background-color: #cccccc;
+  background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
+}
+Example
+Sets a radial-gradient (two colors) as a background image for a <div> element:
+
+#grad1 {
+  height: 200px;
+  background-color: #cccccc;
+  background-image: radial-gradient(red, yellow);
+}
+Example
+Sets a radial-gradient (three colors) as a background image for a <div> element:
+
+#grad1 {
+  height: 200px;
+  background-color: #cccccc;
+  background-image: radial-gradient(red, yellow, green);
+}
+Example
+The repeating-radial-gradient() function is used to repeat radial gradients:
+
+#grad1 {
+  height: 200px;
+  background-color: #cccccc;
+  background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
+}
+
+/*BACKGROUND REPEAT
+Definition and Usage
+The background-repeat property sets if/how a background image will be repeated.
+By default, a background-image is repeated both vertically and horizontally.
+Tip: The background image is placed according to the background-position property. 
+If no background-position is specified, the image is always placed at the element's top left corner.*/
+
+Property Values
+Value   Description Play it
+repeat  The background image is repeated both vertically and horizontally.  The last image will be clipped if it does not fit. This is default  
+repeat-x    The background image is repeated only horizontally  
+repeat-y    The background image is repeated only vertically    
+no-repeat   The background-image is not repeated. The image will only be shown once 
+space   The background-image is repeated as much as possible without clipping. The first and last images are pinned to either side of the element, and whitespace is distributed evenly between the images  
+round   The background-image is repeated and squished or stretched to fill the space (no gaps)  
+initial Sets this property to its default value. 
+inherit Inherits this property from its parent element. 
+
+More Examples
+Example
+Repeat a background image both vertically and horizontally (this is default):
+
+body {
+  background-image: url("paper.gif");
+  background-repeat: repeat;
+}
+Example
+Repeat a background image only horizontally:
+
+body {
+  background-image: url("paper.gif");
+  background-repeat: repeat-x;
+}
+Example
+Do not repeat a background image. The image will only be shown once:
+
+body {
+  background-image: url("paper.gif");
+  background-repeat: no-repeat;
+}
+Example
+Using background-repeat: space and background-repeat: round:
+
+#example2 {
+  border: 2px solid black;
+  padding: 25px;
+  background: url("w3css.gif");
+  background-repeat: space;
+}
+
+#example3 {
+  border: 1px solid black;
+  padding: 25px;
+  background: url("w3css.gif");
+  background-repeat: round;
+}
+Example
+Use different background properties to create a "hero" image:
+
+.hero-image {
+  background-image: url("photographer.jpg"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+/*BACKGROUND SIZE
+Definition and Usage
+The background-size property specifies the size of the background images.
+
+There are four different syntaxes you can use with this property: 
+the keyword syntax ("auto", "cover" and "contain"), 
+the one-value syntax (sets the width of the image (height becomes "auto"), 
+the two-value syntax (first value: width of the image, second value: height), 
+and the multiple background syntax (separated with comma).*/
+
+Example
+Specify the size of a background image with percent:
+
+#example1 {
+  background: url(mountain.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#example2 {
+  background: url(mountain.jpg);
+  background-repeat: no-repeat;
+  background-size: 75% 50%;
+}
+Example
+Specify the size of a background image with "cover":
+
+#example1 {
+  background: url(mountain.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+Example
+Specify the size of a background image with "contain":
+
+#example1 {
+  background: url(mountain.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+Example
+Here we have two background images. We specify the size of the first background image with "contain", and the second background-image with "cover":
+
+#example1 {
+  background: url(img_tree.gif), url(mountain.jpg);
+  background-repeat: no-repeat;
+  background-size: contain, cover;
+}
+Example
+Use different background properties to create a "hero" image:
+
+.hero-image {
+  background-image: url("photographer.jpg"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+Property Values
+Value   Description Play it
+auto    Default value. The background image is displayed in its original size   
+length  Sets the width and height of the background image. The first value sets the width, the second value sets the height. If only one value is given, the second is set to "auto". Read about length units   
+percentage  Sets the width and height of the background image in percent of the parent element. The first value sets the width, the second value sets the height. If only one value is given, the second is set to "auto"   
+cover   Resize the background image to cover the entire container, even if it has to stretch the image or cut a little bit off one of the edges 
+contain Resize the background image to make sure the image is fully visible 
+initial Sets this property to its default value. Read about initial 
+inherit Inherits this property from its parent element. Read about inherit
+
+/*BACKGROUND POSITION
+CSS background-position Property
+
+Example
+How to position a background-image:
+
+body {
+  background-image: url('w3css.gif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+Definition and Usage
+The background-position property sets the starting position of a background image.
+
+Tip: By default, a background-image is placed at the top-left corner of an element, and repeated both vertically and horizontally.
+
+CSS Syntax
+background-position: value;
+Property Values
+Value   Description Play it
+left top
+left center
+left bottom
+right top
+right center
+right bottom
+center top
+center center
+center bottom   If you only specify one keyword, the other value will be "center"   
+x% y%   The first value is the horizontal position and the second value is the vertical. The top left corner is 0% 0%. The right bottom corner is 100% 100%. If you only specify one value, the other value will be 50%. . Default value is: 0% 0%  
+xpos ypos   The first value is the horizontal position and the second value is the vertical. The top left corner is 0 0. Units can be pixels (0px 0px) or any other CSS units. If you only specify one value, the other value will be 50%. You can mix % and positions  
+initial Sets this property to its default value. Read about initial 
+inherit Inherits this property from its parent element. Read about inherit  */
+
+More Examples
+Example
+How to position a background-image to be centered at top:
+
+body {
+  background-image: url('w3css.gif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
+}
+Example
+How to position a background-image to be bottom right:
+
+body {
+  background-image: url('w3css.gif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom right;
+}
+Example
+How to position a background-image using percent:
+
+body {
+  background-image: url('w3css.gif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+}
+Example
+How to position a background-image using pixels:
+
+body {
+  background-image: url('w3css.gif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50px 150px;
+}
+Example
+Use different background properties to create a "hero" image:
+
+.hero-image {
+  background-image: url("photographer.jpg"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+/*BACKGROUND CLIP
+Definition and Usage
+The background-clip property defines how far the background (color or image) should extend within an element.
+background-clip defines the area for the element’s background. 
+In other words, it defines what should be considered as the background area of the element.
+ Where does the background start from, and where does it end taking the areas in the box model into consideration.*/
+
+ CSS background-clip Property
+
+Example
+Specify how far the background should extend within an element:
+
+div {
+  border: 10px dotted black;
+  padding: 15px;
+  background: lightblue;
+  background-clip: padding-box;
+}
+
+CSS Syntax
+background-clip: border-box|padding-box|content-box|initial|inherit;
+Property Values
+Value   Description Play it
+border-box  Default value. The background extends behind the border 
+padding-box The background extends to the inside edge of the border 
+content-box The background extends to the edge of the content box   
+initial Sets this property to its default value. Read about initial 
+inherit Inherits this property from its parent element. Read about inherit  
+
+/*BACKGROUND ATTACHMENT
+CSS background-attachment Property
+Definition and Usage
+The background-attachment property sets whether a background image scrolls with the rest of the page, or is fixed.*/
+
+Example
+A background-image that will not scroll with the page (fixed):
+
+body {
+  background-image: url("img_tree.gif");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+CSS Syntax
+background-attachment: scroll|fixed|local|initial|inherit;
+Property Values
+Value   Description
+scroll  The background image will scroll with the page. This is default
+fixed   The background image will not scroll with the page
+local   The background image will scroll with the element's contents
+initial Sets this property to its default value. Read about initial
+inherit Inherits this property from its parent element. Read about inherit
+
+More Examples
+Example
+A background-image that will scroll with the page (scroll). This is default:
+
+body {
+  background-image: url("img_tree.gif");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+Example
+How to create a simple parallax scrolling effect (create an illusion of 3D depth):
+
+.fixed-bg {
+  /* The background image */
+  background-image: url("img_tree.gif");
+
+  /* Set a specified height, or the minimum height for the background image */
+  min-height: 500px;
+
+  /* Set background image to fixed (don't scroll along with the page) */
+  background-attachment: fixed;
+
+  /* Center the background image */
+  background-position: center;
+
+  /* Set the background image to no repeat */
+  background-repeat: no-repeat;
+
+  /* Scale the background image to be as large as possible */
+  background-size: cover;
+}
+
+/*BACKGROUND ORIGIN
+Definition and Usage
+The background-origin property specifies the origin position (the background positioning area) of a background image.
+Note: This property has no effect if background-attachment is "fixed".
+background-origin sets the point where the background image should start from and where it ends relative to the areas in the box model*/
+CSS background-origin Property
+
+Example
+Let the background-image start from the upper left corner of the content:
+
+#example1 {
+  border: 10px dashed black;
+  padding: 25px;
+  background: url(paper.gif);
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}
+
+CSS Syntax
+background-origin: padding-box|border-box|content-box|initial|inherit;
+Property Values
+Value   Description Play it
+padding-box Default value. The background image starts from the upper left corner of the padding edge   
+border-box  The background image starts from the upper left corner of the border    
+content-box The background image starts from the upper left corner of the content   
+initial Sets this property to its default value. 
+inherit Inherits this property from its parent element. 
+
+More Examples
+Example
+Set two background images for a <div> element. Let the "paper.gif" background image starts from the upper left corner of the padding edge, and let the "img_tree.gif" background image starts from the upper left corner of the content:
+
+#example1 {
+  border: 10px dashed black;
+  padding: 25px;
+  background: url(img_tree.gif), url(paper.gif);
+  background-repeat: no-repeat;
+  background-origin: content-box, padding-box;
+}
+
+/*BACKGROUND SHORTHAND
+The background property allow us to add multiple values to the one property, without the need to create multiple properties
+Background shorthand property can define each property at the same time
+
+background: bg-image bg-position / bg-size repeat-style bg-attachment bg-origin bg-clip bg-color
+
+CSS background - Shorthand property
+To shorten the code, it is also possible to specify all the background properties in one single property. This is called a shorthand property*/
+
+Instead of writing:
+
+body {
+  background-color: #ffffff;
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+You can use the shorthand property background:
+
+Example
+Use the shorthand property to set the background properties in one declaration:
+
+body {
+  background: #ffffff url("img_tree.png") no-repeat right top;
+}
+When using the shorthand property the order of the property values is:
+
+background-color
+background-image
+background-repeat
+background-attachment
+background-position
+It does not matter if one of the property values is missing, as long as the other ones are in this order. Note that we do not use the background-attachment property in the examples above, as it does not have a value.
+
+All CSS Background Properties
+Property    Description
+background  Sets all the background properties in one declaration
+background-attachment   Sets whether a background image is fixed or scrolls with the rest of the page
+background-clip Specifies the painting area of the background
+background-color    Sets the background color of an element
+background-image    Sets the background image for an element
+background-origin   Specifies where the background image(s) is/are positioned
+background-position Sets the starting position of a background image
+background-repeat   Sets how a background image will be repeated
+background-size Specifies the size of the background image(s)
+
+

@@ -1,0 +1,68 @@
+/*Text Alignment
+The text-align property is used to set the horizontal alignment of a text.
+
+A text can be left or right aligned, centered, or justified.
+
+The following example shows center aligned, and left and right aligned text 
+(left alignment is default if text direction is left-to-right, and right alignment is default if text direction is right-to-left):*/
+
+Example
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: left;
+}
+
+h3 {
+  text-align: right;
+}
+
+/*When the text-align property is set to "justify", each line is stretched so that every line has equal width, 
+and the left and right margins are straight (like in magazines and newspapers):
+The content aligns to fit as many string blocks onto one line as possible. 
+The first word on that line is aligned with the left side of the container, and the last word is along the right side of the container.*/
+
+Example
+div {
+  text-align: justify;
+}
+
+/*The vertical-align property sets the vertical alignment of an element.
+This example demonstrates how to set the vertical alignment of an image in a text:*/
+
+Example
+img.top {
+  vertical-align: top;
+}
+
+img.middle {
+  vertical-align: middle;
+}
+
+img.bottom {
+  vertical-align: bottom;
+}
+
+/*Text Shadow
+The text-shadow property adds shadow to text. 
+It takes four values: shadow in the horizontal direction, distance in the vertical direction, blur effect and color
+
+In its simplest use, you only specify the horizontal shadow (2px) and the vertical shadow (2px):*/
+
+h1 {
+  text-shadow: 2px 2px;
+}
+
+Next, add a color (red) to the shadow:
+
+h1 {
+  text-shadow: 2px 2px red;
+}
+
+Then, add a blur effect (5px) to the shadow:
+
+h1 {
+  text-shadow: 2px 2px 5px red;
+}

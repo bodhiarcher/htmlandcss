@@ -1,0 +1,109 @@
+CLI
+CLI stands for command line interface. It is a program that allows users to type text commands instructing the computer to do specific tasks.
+
+Shell – The Foundation Behind CLI
+If we dive from CLI into the deeper part of an operating system, we will find the shell.
+
+Shell is a user interface responsible for processing all commands typed on CLI. It reads and interprets the commands and instructs the operating system to perform tasks as requested.
+
+In other words, a shell is a user interface that manages CLI and acts as the man-in-the-middle, connecting users with the operating system.
+
+In practice, there are many things that shell can process, such as:
+
+Working with files and directories
+Opening and closing a program
+Managing computer processes
+Performing repetitive tasks
+Among many types of shell, the most popular ones are Windows shell (for Windows) and bash (for Linux and MacOS).
+
+Windows Shell
+The default shell in Windows is CMD.exe or the Command Prompt. In fact, Microsoft has used the Command Prompt since the old days, where MS-DOS was the main operating system.
+
+To open the Command Prompt, you can click Start -> All Programs -> Accessories -> Command Prompt. Or, you can simply press Windows+R, then type CMD, and press enter.
+
+Depending on what you need, type in either a single command or a combination. You can also type commands that run within a sequence (one command is executed after another).
+
+The Command Prompt is so robust that it can manage many things within the Windows operating system:
+
+Changing directories, listing directories, content, etc
+Handling networking like displaying IP networks settings
+Managing files like renaming, moving, etc
+Managing media like formatting and renaming volumes
+Now, let’s learn how to use some syntax in the command prompt:
+
+Changing directory
+To navigate to a specific directory or folder in the command prompt, use CD [path]. Make sure you add space before the intended path. For example:
+CD C:\Program Files
+Renaming a file
+To rename a file within a specific folder, use REN [drive:][path] [source] [target].If you mention the location, that means the renamed file will be saved in the same folder. For example:
+REN d:untitled.txt untitled1.txt
+Deleting a file
+To delete a file in the command prompt use DEL [filename]. If you want to add the options like force deletion, you can add it before the file name. For example:
+DEL /F untitled.txt
+Renaming a Volume Disk
+To edit the name of a specific volume disk, use LABEL [drive:][new volume name]. Keep in mind that you can use up to 32 characters on  NTFS volume and 11 on FAT volume. For example:
+D:\ > LABEL d:MyData
+
+Bash
+Bash stands for Bourne Again SHell and was developed by the Free Software Foundation.
+
+Bash is a type of shell used in MacOS and many Linux distributions. However, you can also install bash Linux on Windows 10.
+
+In Linux, Bash shell is one of many shells the Linux users can use. The other types are Tchs shell, Ksh shell, and Zsh shell.
+
+In most Linux distributions, the shell is located under the Utilities menu. If you use Gnome desktop, the name is Terminal, but if you use KDE, the name is Konsole.
+
+Meanwhile, in MacOS, the program is Terminal.app. To run this program, go to Application -> Utilities -> Terminal. Or, you can simply type terminal using Spotlight search.
+
+Once the terminal’s opened, you can start typing a command. Basically, most commands consist of: the command itself, the argument, and the option.
+
+While the command contains the instruction we want to perform, the argument tells where the command should operate and the option requests the modification of the output.
+
+Now it’s time to learn how to use the shell.
+
+To begin with, you need to know the syntax to deal with the shell. This is also known as shell scripting – ways of using the script in CLI to run certain tasks.
+
+While there are many commands you can use with CLI, they all fall into two categories:
+
+The commands that handle the processes
+The commands that handle the files
+To understand the command syntax in MacOS, let’s learn from these examples:
+
+List all files in a folder
+To know what files under a specific folder, use ls.
+The default command will exclude the hidden files. To show all files, you can add -a. For example:
+ls -a
+Listing All Files in a Folder Using CLI
+
+Change directory
+To move to a specific directory, use cd destination. For example:
+cd ~/Desktop
+Change Directory Using MacOS Terminal
+
+Rename file
+To rename a file within a specific folder, use mv source destination. Keep in mind, that you need to make sure the name of the file and the extension. For example:
+mv ~/Desktop/untitled.rtf ~/Desktop/untitled1.rtf
+Renaming a File Using MacOS Terminal
+
+Delete a file
+To delete a file in the specific folder use rm filename. To avoid deleting the wrong file,  make sure you move to the right folder destination first. For example:
+    rm untitled.rtf
+Deleting a File Using MacOS TerminalAgain, typing the right command is important. That means you should pay attention to each character you use, including space. Not only that, make sure you type the correct case.
+
+If for certain reasons you want to stop the ongoing process on the Command Prompt or Bash, simply hit Control+C.
+
+Why Would You Use CLI over GUI?
+As previously mentioned, the GUI was developed within the operating system as soon as the mouse became a new input device to operate the computer.
+
+We should admit that GUI is visually attractive and easily understood. But, for some tasks which are vital, CLI is way more powerful.
+
+Here, we would like to pick some points why you would use CLI over GUI. However, we leave it to you to choose depending on your type of work.
+
+Less Resource
+It is not a secret that the text-based program needs very little resources of your computer. This means that with CLI you can do similar tasks with minimum resources.
+High Precision
+You can use a specific command to target specific destinations with ease. As long as you don’t type the wrong command, it will work like a charm. Once you learn the basics, writing syntax is not as hard as you might think.
+Repetitive Tasks Friendly
+GUI has developed well over the years. But, the operating system may not give you all the menus and buttons to perform all tasks. One of the reasons is safety. This leaves you overwhelmed if you have to do repetitive tasks. For example, when you have to handle hundreds of files within a folder, CLI enables you to use a single command to do automate the repetition easily.
+Powerful
+Most operating systems today prevent you from messing up the system’s core process. Windows has system protection and MacOS has SIP (System Integrity Protection). You won’t be able to perform certain tasks which are system protected. However, with CLI, you will have full control over your system.

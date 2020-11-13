@@ -1,0 +1,262 @@
+Overflow
+What happens if we set the height for the element, but its content is higher than the value of that height? 
+In other words, what happens when the content is bigger than the container?
+
+We can fix this problem with the overflow property. 
+The overflow property controls the content that falls out of the boundaries of the container.
+
+If we set the value to auto, a scrollbar will be shown only if it is needed. 
+In other words, it will show up if the content is larger than the container. 
+In this case, a vertical scrollbar will be added on the right side of the container.
+
+On the other hand, the value of scroll will add the scrollbar whether it is needed or not, both horizontally and vertically
+
+Sometimes we want to clip out the content that is hanging out of the container. 
+We want to hide it. If this is the case, then we need to set the value of hidden to the overflow property.
+
+But what if we want the content to be shown? If we don’t mind that content is breaking out of the container? 
+Then we should use the visible property:
+
+CSS allows us to control the vertical or the horizontal scrollbar with two properties.
+
+overflow-x controls the horizontal scrollbar
+overflow-y controls the vertical scrollbar
+overflow-x and overflow-y have the same values as the overflow property
+
+auto
+scroll
+visible
+hidden.
+These values add the same behaviour as for the overflow property.
+
+CSS Overflow
+The overflow property specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.
+
+The overflow property has the following values:
+
+visible - Default. The overflow is not clipped. The content renders outside the element's box
+hidden - The overflow is clipped, and the rest of the content will be invisible
+scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content
+auto - Similar to scroll, but it adds scrollbars only when necessary
+Note: The overflow property only works for block elements with a specified height.
+
+Note: In OS X Lion (on Mac), scrollbars are hidden by default and only shown when being used (even though "overflow:scroll" is set).
+
+overflow: visible
+By default, the overflow is visible, meaning that it is not clipped and it renders outside the element's box:
+
+You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+Example
+div {
+  width: 200px;
+  height: 50px;
+  background-color: #eee;
+  overflow: visible;
+}
+
+
+overflow: hidden
+With the hidden value, the overflow is clipped, and the rest of the content is hidden:
+
+You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+Example
+div {
+  overflow: hidden;
+}
+overflow: scroll
+Setting the value to scroll, the overflow is clipped and a scrollbar is added to scroll inside the box. Note that this will add a scrollbar both horizontally and vertically (even if you do not need it):
+
+You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+Example
+div {
+  overflow: scroll;
+}
+overflow: auto
+The auto value is similar to scroll, but it adds scrollbars only when necessary:
+
+You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+Example
+div {
+  overflow: auto;
+}
+overflow-x and overflow-y
+The overflow-x and overflow-y properties specifies whether to change the overflow of content just horizontally or vertically (or both):
+
+overflow-x specifies what to do with the left/right edges of the content.
+overflow-y specifies what to do with the top/bottom edges of the content.
+
+You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+Example
+div {
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-y: scroll; /* Add vertical scrollbar */
+}
+
+All CSS Overflow Properties
+Property	Description
+overflow	Specifies what happens if content overflows an element's box
+overflow-x	Specifies what to do with the left/right edges of the content if it overflows the element's content area
+overflow-y	Specifies what to do with the top/bottom edges of the content if it overflows the element's content area
+
+/*FLOAT
+
+Float
+The float property is used to position elements by pushing them either to the left or to the right of their container. 
+The concept of floating elements is taken from the print design. 
+If you look at the newspaper, you notice that there are images pushed to either the left or right side of the text next to those images, 
+with the text mostly wrapping the image. 
+is basically what a float does in CSS
+
+CSS float Property
+
+Example
+Let an image float to the right:
+
+img  {
+  float: right;
+}
+
+Definition and Usage
+The float property specifies how an element should float.
+
+Note: Absolutely positioned elements ignore the float property!
+
+Note: Elements after a floating element will flow around it. 
+To avoid this, use the clear property or the clearfix hack (see example at the bottom of this page).
+
+CSS Syntax
+float: none|left|right|initial|inherit;
+Property Values
+Value	Description	Play it
+none	The element does not float, (will be displayed just where it occurs in the text). This is default	
+left	The element floats to the left of its container	
+right	The element floats the right of its container	
+initial	Sets this property to its default value.	
+inherit	Inherits this property from its parent element. */
+
+More Examples
+Example
+Let an image float to the left:
+
+img  {
+  float: left;
+}
+Example
+Let image be displayed just where it occurs in the text (float: none):
+
+img  {
+  float: none;
+}
+Example
+Let the first letter of a paragraph float to the left and style the letter:
+
+span {
+  float: left;
+  width: 0.7em;
+  font-size: 400%;
+  font-family: algerian, courier;
+  line-height: 80%;
+}
+Example
+Use float with a list of hyperlinks to create a horizontal menu:
+
+.header, .footer {
+  background-color: grey;
+  color: white;
+  padding: 15px;
+}
+
+.column {
+  float: left;
+  padding: 15px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.menu {width: 25%;}
+.content {width: 75%;}
+Example
+Use float to create a homepage with a header, footer, left content and main content:
+
+.header, .footer {
+  background-color: grey;
+  color: white;
+  padding: 15px;
+}
+
+.column {
+  float: left;
+  padding: 15px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.menu {width: 25%;}
+.content {width: 75%;}
+Example
+Do not allow floating elements on the left or the right side of a specified <p> element:
+
+img {
+  float: left;
+}
+
+p.clear {
+  clear: both;
+}
+Example
+If a floating element is taller than the containing element, it will overflow outside its container. 
+It is possible to fix this with the "clearfix hack":
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*CLEAR
+
+Clear
+The clear property is directly related to the float property.
+ It is used to clear one or both sides of the element that follows the floated element 
+ (the one that comes after the floated element). It specifies whether an element can be placed next to the floated element. 
+ If we clear the left side of the element, then other elements cannot be placed on the left side of the element. 
+ The clear property can have three values:
+
+left
+right
+both.*/
+
+CSS clear Property
+
+Example
+Do not allow floating elements on the left or the right side of a specified <p> element:
+
+img {
+  float: left;
+}
+
+p.clear {
+  clear: both;
+}
+
+/*Definition and Usage
+The clear property specifies on which sides of an element floating elements are not allowed to float.
+
+CSS Syntax
+clear: none|left|right|both|initial|inherit;
+Property Values
+Value	Description
+none	Default. Allows floating elements on both sides
+left	No floating elements allowed on the left side
+right	No floating elements allowed on the right side
+both	No floating elements allowed on either the left or the right side
+initial	Sets this property to its default value. 
+inherit	Inherits this property from its parent element. */

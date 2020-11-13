@@ -1,0 +1,66 @@
+/*The CSS Box Model
+All HTML elements can be considered as boxes. In CSS, the term "box model" is used when talking about design and layout.
+
+The CSS box model is essentially a box that wraps around every HTML element. 
+It consists of: margins, borders, padding, and the actual content.
+
+Explanation of the different parts:
+
+Content - The content of the box, where text and images appear
+Padding - Clears an area around the content. The padding is transparent
+Border - A border that goes around the padding and content
+Margin - Clears an area outside the border. The margin is transparent
+The box model allows us to add a border around elements, and to define space between elements. */
+
+Example
+Demonstration of the box model:
+
+div {
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}
+
+/*CSS Border Properties
+The CSS border properties allow you to specify the style, width, and color of an element's border.*/
+
+Example
+#box {
+        border-left: 1px solid green;
+        border-top: 5px dotted red;
+        border-bottom: 3px dashed blue;
+        border-right: 4px ridge purple;
+      }
+
+/*Margin
+Definition and Usage
+The margin property sets the margins for an element, and is a shorthand property for the following properties:*/
+
+margin-top
+margin-right
+margin-bottom
+margin-left
+If the margin property has four values:
+
+margin: 10px 5px 15px 20px;
+top margin is 10px
+right margin is 5px
+bottom margin is 15px
+left margin is 20px
+If the margin property has three values:
+
+margin: 10px 5px 15px;
+top margin is 10px
+right and left margins are 5px
+bottom margin is 15px
+If the margin property has two values:
+
+margin: 10px 5px;
+top and bottom margins are 10\ px
+right and left margins are 5px
+If the margin property has one value:
+
+margin: 10px;
+all four margins are 10px
+Note: Negative values are allowed.

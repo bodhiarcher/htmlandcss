@@ -1,0 +1,17 @@
+/*Think of specificity as a score/rank that determines which style declarations are ultimately applied to an element. 
+Every selector has its place in the specificity hierarchy*/
+
+/*Inline styles - An inline style is attached directly to the element to be styled. Example: <h1 style="color: #ffffff;">.*/
+/*IDs - An ID is a unique identifier for the page elements, such as #navbar.*/
+/*Classes, attributes and pseudo-classes - This category includes .classes, [attributes] and pseudo-classes such as :hover, :focus etc.*/
+/*Elements and pseudo-elements - This category includes element names and pseudo-elements, such as h1, div, :before and :after.*/
+
+/*CSS specificity can be thought of numerically to figure out which rule will be applied.
+
+Ranking from highest to lowest
+Inline styles: 1, 0, 0, 0
+IDs: 0, 1, 0, 0
+classes, pseudo-classes, attributes: 0, 0, 1, 0
+elements, pseudo-elements: 0, 0, 0, 1
+
+The following rule: div p {} has the weight of 0,0,0,2 because it targets two elements.*/

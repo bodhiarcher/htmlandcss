@@ -1,0 +1,26 @@
+/*he purpose of the z-index property is to control the vertical stacking of overlapping elements. 
+A higher z-index value appears to be physically closer to you. 
+Its name comes from the cartesian coordinate system where the x-axis is horizontal, 
+the y-axis is vertical and the z-axis is perpendicular to the screen pointing straight at you.
+
+With no z-index value set the elements stack in the same order as they appear in the HTML. 
+The lowest in the hierarchy will appear closest to you.
+ This also means that if element A is on top of element B, 
+no child element of A can be higher in the stack than element B.
+
+Definition and Usage
+The z-index property specifies the stack order of an element.
+
+An element with greater stack order is always in front of an element with a lower stack order.
+
+Note: z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky).*/
+
+Example
+Set the z-index for an image:
+
+img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}

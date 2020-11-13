@@ -1,0 +1,5 @@
+/*CSS Source Order
+When working with CSS, the browser will automatically read from top to bottom. 
+Therefore the CSS rules will be applied in the order in which they are declared. 
+If we declare a CSS rule twice, then the CSS rule that’s declared closest to 
+the bottom of the file will override the CSS rule that was declared near the top of the file.*/
